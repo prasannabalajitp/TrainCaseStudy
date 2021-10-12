@@ -38,37 +38,37 @@ public class Ticket<totalPrice> {
 
         int count = new Random().nextInt(1000)+1000;
 
-//        try {
+        try {
 
-//            FileReader fileReader = new FileReader(file);
-//            BufferedReader bufferedReader = new BufferedReader(fileReader);
-//            String str = bufferedReader.readLine();
-//            System.out.println(str);
-//
-//            if (str == null) {
-//                count = 100;
-//            } else {
-//
-//                count = Integer.parseInt(str.trim()) + 1;
-//            }
-//            System.out.println(count);
-//
-//            fileReader.close();
-//            bufferedReader.close();
-//
-//            FileWriter fileWriter = new FileWriter(file);
-//            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-//
-//            System.out.println("current value: "+count);
-//
-//            bufferedWriter.write(String.valueOf(count));
-//            fileWriter.close();
-//            bufferedWriter.close();
-//
-//
-//        } catch (IOException e) {
-//            System.out.println(e.getMessage());
-//        }
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String str = bufferedReader.readLine();
+            System.out.println(str);
+
+            if (str == null) {
+                count = 100;
+            } else {
+
+                count = Integer.parseInt(str.trim()) + 1;
+            }
+            System.out.println(count);
+
+            fileReader.close();
+            bufferedReader.close();
+
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+            System.out.println("current value: "+count);
+
+            bufferedWriter.write(String.valueOf(count));
+            fileWriter.close();
+            bufferedWriter.close();
+
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
 
         try {
             Statement statement = connection.createStatement();
